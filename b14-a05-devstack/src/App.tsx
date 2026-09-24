@@ -27,6 +27,10 @@ function App() {
     );
   };
 
+  const removeAllFromStack = () => {
+  setStack([]);
+};
+
   return (
     <>
       <Nav />
@@ -49,6 +53,7 @@ function App() {
               <Stack
                 stack={stack}
                 removeFromStack={removeFromStack}
+                removeAllFromStack={removeAllFromStack}
               />
             </div>
 
