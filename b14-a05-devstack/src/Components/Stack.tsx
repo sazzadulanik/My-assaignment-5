@@ -15,10 +15,10 @@ const Stack = ({
   
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm mt-12">
-      <h2 className="text-2xl font-bold text-gray-900">
-        Your Stack
-      </h2>
-<p className="mt-2 text-sm text-gray-500">
+     <h2 className="text-center text-2xl font-bold text-gray-900 lg:text-left">
+  Your Stack
+</h2>
+<p className="mt-2 text-center text-sm text-gray-500 lg:text-left">
   {stack.length} {stack.length === 1 ? "Technology" : "Technology"} Selected
 </p>
       {stack.length === 0 ? (

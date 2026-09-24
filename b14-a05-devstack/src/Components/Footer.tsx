@@ -7,18 +7,14 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-purple-600 text-xs font-bold text-white">
-              DS
-            </div>
-
-            <h2 className="text-lg font-semibold text-gray-800">
-              Dev Stack
-            </h2>
+          <img src="/assets/logo-text.png" alt="" className="w-24"
+/>
+            
           </div>
 
           <p className="mt-4 max-w-xs text-sm leading-6 text-gray-500">
-            Curated tools, technologies, and resources for developers
-            building modern software.
+           Curated tools, technologies, and resources for developers building
+modern software.
           </p>
 
           <div className="mt-5 flex gap-5 text-sm text-gray-500">
@@ -61,17 +57,15 @@ const Footer = () => {
             Company
           </h3>
 
-          <div className="space-y-3 text-sm text-gray-500">
-            <a href="#" className="block hover:text-gray-900">
-              About
-            </a>
-            <a href="#" className="block hover:text-gray-900">
-              Contact
-            </a>
-            <a href="#" className="block hover:text-gray-900">
-              Careers
-            </a>
-          </div>
+          <ul className="space-y-3 text-sm text-gray-500">
+
+            <li className="block hover:text-gray-900">About</li>
+
+            <li className="block hover:text-gray-900">Contact</li>
+
+            <li className="block hover:text-gray-900">Careers </li>
+
+          </ul>
         </div>
 
         {/* Legal */}
@@ -81,12 +75,11 @@ const Footer = () => {
           </h3>
 
           <div className="space-y-3 text-sm text-gray-500">
-            <a href="#" className="block hover:text-gray-900">
-              Privacy Policy
-            </a>
-            <a href="#" className="block hover:text-gray-900">
-              Terms of Service
-            </a>
+
+            <li className="block hover:text-gray-900"> Privacy Policy </li>
+
+            <li className="block hover:text-gray-900">Terms of Service</li>
+
           </div>
         </div>
 
@@ -94,18 +87,16 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="border-t border-gray-100">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 text-xs text-gray-400">
+       <div className="mx-auto flex flex-col gap-3 max-w-7xl px-6 py-5 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-gray-700">
-              Privacy
-            </a>
+          <ul className="flex gap-5">
+            
+            <li className="hover:text-gray-700">Privacy</li>
 
-            <a href="#" className="hover:text-gray-700">
-              Terms
-            </a>
-          </div>
+            <li className="hover:text-gray-700">Terms</li>
+
+          </ul>
         </div>
       </div>
     </footer>

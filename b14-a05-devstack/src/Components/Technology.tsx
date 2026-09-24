@@ -23,8 +23,8 @@ if (loading) {
 }
   return (
     <div>
-      <div className="mb-6">
-        <h2 className="text-3xl font-bold">
+      <div className="mb-6 px-10">
+        <h2 className="text-3xl font-bold text-center lg:text-left">
           Explore the{" "}
           <span className="text-pink-500">Technologies</span>
         </h2>
