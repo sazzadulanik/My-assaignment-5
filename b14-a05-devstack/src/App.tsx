@@ -10,35 +10,33 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [stack, setStack] = useState<any[]>([]);
 
-  const addToStack = (technology: any) => {
-    setStack((prevStack) => {
-      const alreadyAdded = prevStack.some(
-        (item) => item.name === technology.name
-      );
+ const addToStack = (technology: any) => {
+  const alreadyAdded = stack.some(
+    (item) => item.name === technology.name
+  );
 
-    if (alreadyAdded) {
-  toast.warning(`${technology.name} is already in your stack!`);
-  return prevStack;
-}
+  if (alreadyAdded) {
+    toast.warning(`${technology.name} is already in your stack!`);
+    return;
+  }
 
-        toast.success(`${technology.name} added to your stack!`);
+  setStack((prevStack) => [...prevStack, technology]);
 
-      return [...prevStack, technology];
-    });
-  };
+  toast.success(`${technology.name} added to your Stack!`);
+};
 
-  const removeFromStack = (name: string) => {
+const removeFromStack = (name: string) => {
   setStack((prevStack) =>
     prevStack.filter((item) => item.name !== name)
   );
 
-  toast.info(`${name} removed from your stack!`);
+  toast.info(`${name} removed from your Stack!`);
 };
 
   const removeAllFromStack = () => {
   setStack([]);
 
-  toast.info("All technologies removed from your stack!");
+  toast.info("All technologies removed from your Stack!");
 };
 
   return (
