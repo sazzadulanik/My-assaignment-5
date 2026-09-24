@@ -3,6 +3,9 @@ import Nav from "./Components/Nav";
 import Banner from "./Components/banner";
 import Technology from "./Components/Technology";
 import Stack from "./Components/Stack";
+import Footer from "./Components/Footer";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [stack, setStack] = useState<any[]>([]);
@@ -13,22 +16,29 @@ function App() {
         (item) => item.name === technology.name
       );
 
-      if (alreadyAdded) {
-        return prevStack;
-      }
+    if (alreadyAdded) {
+  toast.warning(`${technology.name} is already in your stack!`);
+  return prevStack;
+}
+
+        toast.success(`${technology.name} added to your stack!`);
 
       return [...prevStack, technology];
     });
   };
 
   const removeFromStack = (name: string) => {
-    setStack((prevStack) =>
-      prevStack.filter((item) => item.name !== name)
-    );
-  };
+  setStack((prevStack) =>
+    prevStack.filter((item) => item.name !== name)
+  );
+
+  toast.info(`${name} removed from your stack!`);
+};
 
   const removeAllFromStack = () => {
   setStack([]);
+
+  toast.info("All technologies removed from your stack!");
 };
 
   return (
@@ -60,6 +70,9 @@ function App() {
           </div>
         </div>
       </section>
+<Footer />
+
+<ToastContainer position="top-right" autoClose={2000} />
     </>
   );
 }
