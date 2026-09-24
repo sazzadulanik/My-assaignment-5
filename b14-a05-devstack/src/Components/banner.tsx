@@ -5,7 +5,7 @@ const Banner = () => {
         <div className="grid items-center gap-10 lg:grid-cols-2">
 
           {/* Left Content */}
-          <div>
+          <div className="px-8">
             <h1 className="text-5xl font-bold leading-tight text-gray-900">
               Build Your Ideal{" "}
               <span className="bg-gradient-to-r from-red-500 to-purple-600 bg-clip-text text-transparent">
