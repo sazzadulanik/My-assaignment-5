@@ -11,6 +11,8 @@ const Stack = ({
   removeFromStack,
   removeAllFromStack,
 }: StackProps) => {
+
+  
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm mt-12">
       <h2 className="text-2xl font-bold text-gray-900">

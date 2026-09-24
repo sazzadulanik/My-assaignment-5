@@ -1,5 +1,6 @@
 import StackIcon from "tech-stack-icons";
 import technologies from "../data.json";
+import { useEffect, useState } from "react";
 
 interface TechnologyProps {
   addToStack: (technology: any) => void;
@@ -7,6 +8,19 @@ interface TechnologyProps {
 }
 
 const Technology = ({ addToStack, stack }: TechnologyProps) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 500);
+
+  return () => clearTimeout(timer);
+}, []);
+
+if (loading) {
+  return <p className="py-10 text-center text-gray-500">Loading...</p>;
+}
   return (
     <div>
       <div className="mb-6">
@@ -20,7 +34,7 @@ const Technology = ({ addToStack, stack }: TechnologyProps) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {technologies.map((technology) => (
           <div
             key={technology.name}
@@ -54,6 +68,10 @@ const Technology = ({ addToStack, stack }: TechnologyProps) => {
               <span className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-[10px] font-medium text-gray-600">
                 {technology.category}
               </span>
+
+              <span className="rounded-full border border-blue-100 bg-blue-50 px-2.5 py-1 text-[10px] font-medium text-blue-600">
+ {technology.level}
+</span>
 
               <div className="flex items-center gap-1">
                 <span className="text-yellow-400">★</span>

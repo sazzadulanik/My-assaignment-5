@@ -2,15 +2,20 @@
 
 const Nav = () => {
   return (
-     <nav>
-      <div className="mx-auto px-6 py-5 flex items-center justify-between">
+     <nav className="sticky top-0 z-50">
+      constructor(parameters) {
+        
+      }
+     
+     <div className="container mx-auto flex items-center justify-between ...">
+        <button className="text-2xl lg:hidden">
+  ☰
+</button>
 
-        <div>
-         <img src="assets/logo-text.png" alt="" />
-        </div>
-
-        <div className="flex gap-8 font-medium text-gray-600">
-
+       <div className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+  <img src="assets/logo-text.png" alt="" />
+</div>
+      <div className="hidden lg:flex gap-6">
           <a href="#" className="hover:text-pink-500">
             Home
           </a>
@@ -33,7 +38,7 @@ const Nav = () => {
         </div>
 
       
-        <div className="flex gap-4">
+       <div className="flex gap-2 lg:gap-4">
 
           <button className="font-medium text-gray-600">
             Sign In

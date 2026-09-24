@@ -46,10 +46,9 @@ const removeFromStack = (name: string) => {
 
       <section className="py-16">
         <div className="container mx-auto px-5">
-          <div className="flex items-start gap-8">
-
+        <div className="flex flex-col gap-8 lg:flex-row">
             {/* Technology */}
-            <div className="w-[72%]">
+           <div className="w-full lg:w-[72%]">
               <Technology
                 addToStack={addToStack}
                 stack={stack}
@@ -57,7 +56,7 @@ const removeFromStack = (name: string) => {
             </div>
 
             {/* Your Stack */}
-            <div className="mt-10 w-[28%]">
+          <div className="mt-0 w-full lg:mt-10 lg:w-[28%]">
               <Stack
                 stack={stack}
                 removeFromStack={removeFromStack}
