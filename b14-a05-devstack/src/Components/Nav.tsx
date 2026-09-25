@@ -4,7 +4,7 @@ const Nav = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <button className="lg:hidden">☰</button>
 
-        <img src="assets/logo-text.png" alt="DevStack" className="w-24 lg:w-auto" />
+        <img src="/logo-text.png" alt="DevStack" className="w-24 lg:w-auto" />
 
        <ul className="hidden gap-6 lg:flex">
           <li>Home</li>
