@@ -7,7 +7,7 @@ const Footer = () => {
         
         <div>
           <div className="flex items-center gap-2">
-          <img src="/assets/logo-text.png" alt="" className="w-24"/>
+          <img src="/logo-text.png" alt="DevStack" className="w-24"/>
           </div>
 
           <p className="mt-4 max-w-xs text-sm leading-6 text-gray-500">
